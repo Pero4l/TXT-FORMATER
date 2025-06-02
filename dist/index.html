@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TXT-FORMATER</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-yellow-200">
     
+    <div class="mt-16 p-4 text-2xl">
+        <label for="">Text: </label>
+    <input id="input" type="text"><br><br>
+
+    <button id="format" class="bg-yellow-800 text-white p-3">Format</button>
+    </div>
+
+
+    <h1  class="text-2xl underline">FORMATED TEXT</h1>
+
+    <div id="display" class="text-2xl">
+
+
+        <!-- <p>
+            <span><b>hi</b></span><br><br>
+            <span class="">hi</span> <br><br>
+            <span class="bg-red-400">hi</span>
+        </p> -->
+    </div>
+
+   
+
+
+    <script>
+
+        let inputTxt = document.getElementById('input');
+        let button = document.getElementById('format');
+        let show = document.getElementById('display');
+
+
+
+        button.addEventListener('click', () =>{
+            
+            show.innerHTML = `
+                     <p>
+            <span><b>${inputTxt.value}</b></span><br><br>
+            <span class="">${inputTxt.value.toUpperCase()}</span> <br><br>
+            <span class="bg-red-400">${inputTxt.value}</span>
+        </p>
+            `
+            
+        })
+
+
+    </script>
+
 </body>
 </html>
